@@ -34,30 +34,32 @@ public class Sign : MonoBehaviour
 
     void OnMouseDown()
     {
-
-        Debug.Log("Clicked on " + this.gameObject);
-        if (indicator.activeSelf)
+        if (side.IsPlayerControlled)
         {
-            GameObject chosen = null;
-            foreach (Transform child in transform.parent)
+            Debug.Log("Clicked on " + this.gameObject);
+            if (indicator.activeSelf)
             {
-                if (child.GetComponent<Sign>().isChosen)
+                GameObject chosen = null;
+                foreach (Transform child in transform.parent)
                 {
-                    chosen = child.gameObject;
+                    if (child.GetComponent<Sign>().isChosen)
+                    {
+                        chosen = child.gameObject;
+                    }
                 }
+
+                Debug.Log(chosen);
+
+                chosen.GetComponent<Sign>().nextSign = this.gameObject;
+                signSystem.unChoseAll();
+
+                chosen.transform.right = transform.position - chosen.transform.position;
             }
-
-            Debug.Log(chosen);
-
-            chosen.GetComponent<Sign>().nextSign = this.gameObject;
-            signSystem.unChoseAll();
-
-            chosen.transform.right = transform.position - chosen.transform.position;
-        }
-        else
-        {
-            Debug.Log("Chosing");
-            Chose();
+            else
+            {
+                Debug.Log("Chosing");
+                Chose();
+            }
         }
     }
 
