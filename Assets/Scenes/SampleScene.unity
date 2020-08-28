@@ -504,8 +504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8168f675feef8934b9698801ef7a6ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  maxHP: 100
+  HP: 10
+  maxHP: 10
 --- !u!1001 &858945795
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -819,8 +819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8168f675feef8934b9698801ef7a6ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  maxHP: 100
+  HP: 10
+  maxHP: 10
 --- !u!58 &1055394455
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2561,8 +2561,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8168f675feef8934b9698801ef7a6ef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 100
-  maxHP: 100
+  HP: 10
+  maxHP: 10
 --- !u!58 &1877625108
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2675,10 +2675,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1810648652, guid: da54348804bbf8f498ec4857d81f1b08, type: 3}
-      propertyPath: reloadTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6501259661842097785, guid: da54348804bbf8f498ec4857d81f1b08,
         type: 3}
       propertyPath: targetToMove
