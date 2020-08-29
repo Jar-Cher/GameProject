@@ -27,6 +27,10 @@ public class Sign : MonoBehaviour
         {
             nextSign = this.gameObject;
         }
+        else
+        {
+            transform.right = nextSign.transform.position - transform.position;
+        }
 
         if (!side.IsPlayerControlled)
             this.GetComponent<SpriteRenderer>().sprite = null;
