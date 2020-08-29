@@ -11,16 +11,22 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     virtual public void Update()
     {
+
         if (HP <= 0)
         {
-            this.gameObject.GetComponent<AI>().unregisterAtGM();
-            Destroy(this.gameObject);
+            Die();
         }
     }
 
     virtual public void applyDamage(float damage) {
-        
+
         HP = Mathf.Clamp(HP - damage, 0, maxHP);
         Debug.Log(HP);
+    }
+
+    virtual public void Die()
+    {
+        this.gameObject.GetComponent<AI>().unregisterAtGM();
+        Destroy(this.gameObject);
     }
 }
