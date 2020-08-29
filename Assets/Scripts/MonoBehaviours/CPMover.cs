@@ -8,6 +8,10 @@ public class CPMover : Mover
 
     private GameObject prevTarget;
 
+    // Предложение: Игра выглядит как граф (flow map) который обходят юниты.
+    // Я бы обход делал без использования физики и движения в точку, просто движение по ребру от вершины к верщине, по нормализованой координате
+    // Но я не знаю задумки
+
     // Update is called once per frame
     void Update()
     {

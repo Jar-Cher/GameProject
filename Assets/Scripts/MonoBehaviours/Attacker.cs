@@ -8,6 +8,7 @@ public class Attacker : MonoBehaviour
     public float damage = 8f;
     public float reloadTime = 1f;
 
+    // Это похоже на приватное поле с публичным сеттером, хотя я бы делал иначе (см AI.sc)
     public List<GameObject> availableEnemies;
 
     protected private float lastShot;

@@ -20,6 +20,7 @@ public class Mover : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
     }
 
+    // Этот метод не используется
     virtual public void setSpeed(float newSpeed)
     {
         allowedSpeed = Mathf.Clamp(newSpeed, -maxSpeed, maxSpeed);
@@ -30,11 +31,13 @@ public class Mover : MonoBehaviour
         allowedSpeed = maxSpeed;
     }
 
+    // Этот метод не используется
     virtual public void stop()
     {
         allowedSpeed = 0;
     }
 
+    // Этот метод не используется
     virtual public void setTarget(GameObject newTarget)
     {
         targetToMove = newTarget;

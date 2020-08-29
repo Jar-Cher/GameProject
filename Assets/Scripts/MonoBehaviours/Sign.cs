@@ -40,6 +40,7 @@ public class Sign : MonoBehaviour
     {
         if (side.IsPlayerControlled)
         {
+            // В будущем нужно будет обернуть все эти Debug.Log в #if DEBUG или удалить, чтобы они не попадали в релизные версии
             Debug.Log("Clicked on " + this.gameObject);
             if (indicator.activeSelf)
             {
