@@ -16,16 +16,16 @@ public class StandartAttacker : Attacker
     void Update()
     {
         
-        if (((reloadTime + lastShot) < Time.time) && (availableEnemies.Count > 0) && (_mover.isLookingAtTarget()))
+        if (((reloadTime + lastShot) < Time.time) && (availableEnemies.Count > 0) && (_mover.IsLookingAtTarget()))
         {
-            shoot();
+            Shoot();
         }
     }
 
     // Shoot
-    void shoot()
+    void Shoot()
     {
         lastShot = Time.time;
-        availableEnemies[0].GetComponent<Health>().applyDamage(damage);
+        availableEnemies[0].GetComponent<Health>().ApplyDamage(damage);
     }
 }

@@ -15,7 +15,7 @@ public class CPMover : Mover
             if (Vector2.Distance(targetToMove.transform.position, transform.position) < 0.5)
                 targetToMove = targetToMove.GetComponent<Sign>().nextSign;
 
-        if (isLookingAtTarget() && (targetToLook == null))
+        if (IsLookingAtTarget() && (targetToLook == null))
         {
             float newSpeed = 0f;
             if (_rb2d.velocity.magnitude > allowedSpeed)
