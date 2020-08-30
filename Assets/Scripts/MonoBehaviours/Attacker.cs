@@ -11,6 +11,7 @@ public class Attacker : MonoBehaviour
     public List<GameObject> availableEnemies;
 
     protected private float lastShot;
+
     // Start is called before the first frame update
     void Awake()
     {

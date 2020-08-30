@@ -44,7 +44,6 @@ public class CPMover : Mover
         float angle = Mathf.Atan2(toLookAt.transform.position.y - transform.position.y, toLookAt.transform.position.x - transform.position.x) * Mathf.Rad2Deg;
         Quaternion targetRotation = Quaternion.Euler(new Vector3(0, 0, angle));
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-
     }
 
 }

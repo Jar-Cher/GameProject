@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
 
     virtual public void Die()
     {
-        this.gameObject.GetComponent<AI>().unregisterAtGM();
-        Destroy(this.gameObject);
+        gameObject.GetComponent<AI>().unregisterAtGM();
+        Destroy(gameObject);
     }
 }

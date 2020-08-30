@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cb4dea6022e84542a3b23f46382c624, type: 3}
+  m_Name: SampleSceneSpawnData3
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 6501259661842097791, guid: da54348804bbf8f498ec4857d81f1b08, type: 3}
+  side: {fileID: 11400000, guid: 4e0947ab84ba8fa4dbdee11ec376c7e2, type: 2}
+  spawnPointId: 2
