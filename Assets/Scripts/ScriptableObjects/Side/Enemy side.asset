@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Enemy side
   m_EditorClassIdentifier: 
   color: {r: 1, g: 0.05882353, b: 0.11764706, a: 1}
-  enemies:
-  - {fileID: 11400000, guid: 4e0947ab84ba8fa4dbdee11ec376c7e2, type: 2}
+  enemySides:
   - {fileID: 11400000, guid: acce28c2d78daa246aae363a5ed4ce48, type: 2}
+  - {fileID: 11400000, guid: 4e0947ab84ba8fa4dbdee11ec376c7e2, type: 2}
   isPlayerControlled: 0
+  enemies:
+  - {fileID: 0}
+  - {fileID: 0}
