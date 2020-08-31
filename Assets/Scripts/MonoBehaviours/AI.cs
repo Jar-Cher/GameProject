@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AI : MonoBehaviour
 {
-
     public Side side;
 
     private SpriteRenderer _spriteRenderer;
@@ -13,35 +12,32 @@ public class AI : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        _spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
 
-
-
-
-    }
-
-    void Start()
-    {
-        _gameManager = GameManager.instance;
-
-        _gameManager.RegisterAtGM(gameObject);
-
-        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
-        UpdateSide(side);
+        updateSide(side);
 
         if (side == null)
         {
             Debug.Log("NO SIDE SPECIFIED!");
         }
         Debug.Log("AI online");
+
+        _gameManager = GameManager.instance;
     }
 
-    public void UpdateSide(Side newSide)
+    virtual public void Start()
+    {
+        GameManager.instance.actors.Add(this.gameObject);
+    }
+
+    public void updateSide(Side newSide)
     {
         side = newSide;
-        if (_spriteRenderer != null)
-            _spriteRenderer.color = side.Color;
-        else
-            gameObject.GetComponent<SpriteRenderer>().color = side.Color;
+        _spriteRenderer.color = side.Color;
+    }
+
+    public void unregisterAtGM()
+    {
+        _gameManager.actors.Remove(this.gameObject);
     }
 }

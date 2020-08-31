@@ -18,7 +18,7 @@ public class Health : MonoBehaviour
         }
     }
 
-    virtual public void ApplyDamage(float damage) {
+    virtual public void applyDamage(float damage) {
 
         HP = Mathf.Clamp(HP - damage, 0, maxHP);
         Debug.Log(HP);
@@ -26,7 +26,7 @@ public class Health : MonoBehaviour
 
     virtual public void Die()
     {
-        GameManager.instance.UnregisterAtGM(gameObject);
+        gameObject.GetComponent<AI>().unregisterAtGM();
         Destroy(gameObject);
     }
 }
