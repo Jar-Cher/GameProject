@@ -17,12 +17,6 @@ public class StandartAI : AI
 
     private void Update()
     {
-        if (_gameManager == null)
-        {
-            _gameManager = GameManager.instance;
-            _gameManager.RegisterAtGM(gameObject);
-        }
-
         _attacker.availableEnemies.Clear();
         foreach (GameObject possibleEnemy in side.enemies)
         {

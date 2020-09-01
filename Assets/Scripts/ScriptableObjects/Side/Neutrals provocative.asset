@@ -13,10 +13,7 @@ MonoBehaviour:
   m_Name: Neutrals provocative
   m_EditorClassIdentifier: 
   color: {r: 0.061409745, g: 0.8679245, b: 0.1597303, a: 1}
-  enemySides:
+  enemies:
   - {fileID: 11400000, guid: f0f5178b84960b24791eec7a03a4b93f, type: 2}
   - {fileID: 11400000, guid: 4e0947ab84ba8fa4dbdee11ec376c7e2, type: 2}
   isPlayerControlled: 0
-  enemies:
-  - {fileID: 0}
-  - {fileID: 0}

@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
         if (spawnedMover != null)
             spawned.GetComponent<Mover>().SetTarget(SpawnPoints[spawnPoint].GetComponent<SpawnPoint>().firstSign);
 
-        //RegisterAtGM(spawned);
+        RegisterAtGM(spawned);
     }
 
     public void Spawn(GameObject prefab, Side side, GameObject spawnLocation)
@@ -64,7 +64,7 @@ public class GameManager : MonoBehaviour
         if (spawnedMover != null)
             spawned.GetComponent<Mover>().SetTarget(spawnLocation.GetComponent<SpawnPoint>().firstSign);
 
-        //RegisterAtGM(spawned);
+        RegisterAtGM(spawned);
     }
 
     public void Spawn(SpawnData spawnData)
@@ -74,12 +74,10 @@ public class GameManager : MonoBehaviour
 
     public void RegisterAtGM(GameObject actor)
     {
-        Debug.Log("Checking...");
         if (IsRegistered(actor))
         {
             return;
         }
-        Debug.Log("Check complete!");
         actors.Add(actor);
         foreach(Side side in sides)
         {
