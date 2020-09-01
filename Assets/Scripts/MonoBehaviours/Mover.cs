@@ -20,27 +20,27 @@ public class Mover : MonoBehaviour
         _rb2d = GetComponent<Rigidbody2D>();
     }
 
-    virtual public void setSpeed(float newSpeed)
+    virtual public void SetSpeed(float newSpeed)
     {
         allowedSpeed = Mathf.Clamp(newSpeed, -maxSpeed, maxSpeed);
     }
 
-    virtual public void fullAhead()
+    virtual public void FullAhead()
     {
         allowedSpeed = maxSpeed;
     }
 
-    virtual public void stop()
+    virtual public void Stop()
     {
         allowedSpeed = 0;
     }
 
-    virtual public void setTarget(GameObject newTarget)
+    virtual public void SetTarget(GameObject newTarget)
     {
         targetToMove = newTarget;
     }
 
-    public bool isLookingAtTarget()
+    public bool IsLookingAtTarget()
     {
         if (targetToLook == null)
         {

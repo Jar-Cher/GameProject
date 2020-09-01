@@ -8,9 +8,11 @@ public class Side : ScriptableObject
     [SerializeField]
     private Color color;
     [SerializeField]
-    private List<Side> enemies;
+    private List<Side> enemySides;
     [SerializeField]
     private bool isPlayerControlled;
+
+    public List<GameObject> enemies;
 
     public Color Color
     {
@@ -20,11 +22,11 @@ public class Side : ScriptableObject
         }
     }
 
-    public List<Side> Enemies
+    public List<Side> EnemySides
     {
         get
         {
-            return enemies;
+            return enemySides;
         }
     }
 
