@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AI : MonoBehaviour
 {
-
+    // Testing
     public Side side;
 
     private SpriteRenderer _spriteRenderer;
