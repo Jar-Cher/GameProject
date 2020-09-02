@@ -8,8 +8,9 @@ public class StandartAI : AI
     private Attacker _attacker;
     // Start is called before the first frame update
 
-    void Start()
+    public override void Start()
     {
+        base.Start();
         _mover = GetComponent<Mover>();
         _attacker = GetComponent<Attacker>();
         _mover.FullAhead();
@@ -17,16 +18,11 @@ public class StandartAI : AI
 
     private void Update()
     {
-        if (_gameManager == null)
-        {
-            _gameManager = GameManager.instance;
-            _gameManager.RegisterAtGM(gameObject);
-        }
 
         _attacker.availableEnemies.Clear();
         foreach (GameObject possibleEnemy in side.enemies)
         {
-            if ((possibleEnemy != this.gameObject) &&
+            if ((possibleEnemy != gameObject) &&
                 (Vector2.SqrMagnitude(transform.position - possibleEnemy.transform.position) <= _attacker.attackRange))
             {
                 _attacker.availableEnemies.Add(possibleEnemy);

@@ -13,7 +13,14 @@ public class AI : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
+    }
+
+    virtual public void Start()
+    {
         _gameManager = GameManager.instance;
+
+        _gameManager.RegisterAtGM(gameObject);
 
         _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
@@ -23,12 +30,7 @@ public class AI : MonoBehaviour
         {
             Debug.Log("NO SIDE SPECIFIED!");
         }
-        Debug.Log("AI online");
-    }
 
-    void Start()
-    {
-        
     }
 
     public void UpdateSide(Side newSide)
@@ -42,10 +44,6 @@ public class AI : MonoBehaviour
 
     private void Update()
     {
-        if (_gameManager == null)
-        {
-            _gameManager = GameManager.instance;
-            _gameManager.RegisterAtGM(gameObject);
-        }
+
     }
 }
